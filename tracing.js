@@ -12,7 +12,7 @@ const { HttpInstrumentation } = require("@opentelemetry/instrumentation-http");
 const { registerInstrumentations } = require("@opentelemetry/instrumentation");
 //Exporter
 module.exports = (serviceName) => {
-   const jaegerExporter = new JaegerExporter({
+    const jaegerExporter = new JaegerExporter({
         serviceName: serviceName,
     });
    const exporter = new ConsoleSpanExporter();
